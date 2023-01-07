@@ -19,14 +19,14 @@ class TodoServiceTests {
     }
 
     @Test
-    public void testRegister()throws Exception {
+    public void testRegister() throws Exception {
 
         TodoDTO todoDTO = TodoDTO.builder()
                 .title("JDBC Test Title")
                 .dueDate(LocalDate.now())
                 .build();
 
-        log.info("---------------------------------"); //log4j2
+        log.info("---------------------------------"); // log4j2 설정 확인
         log.info(todoDTO);
 
         todoService.register(todoDTO);
